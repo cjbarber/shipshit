@@ -1,0 +1,1 @@
+Shippers = new Meteor.Collection("Shippers");

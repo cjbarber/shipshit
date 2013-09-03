@@ -1,0 +1,7 @@
+<template name="daily">
+  {{#each projects}}
+    {{> project}}
+  {{/each}}
+
+  <p><a href="{{nextDayPath}}">Nice!</a></p>
+</template>

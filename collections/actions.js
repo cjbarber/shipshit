@@ -1,0 +1,1 @@
+Actions = new Meteor.Collection("Actions");

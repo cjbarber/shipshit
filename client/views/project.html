@@ -1,0 +1,7 @@
+<template name="project">
+  <h3>{{name}}</h3>
+  <p>{{days}} days since progress.</p>
+  {{#if currently_blocked}}
+    <button>{{current_blocker}}</button>
+  {{/if}}
+</template>
