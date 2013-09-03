@@ -1,5 +1,5 @@
 Template.nextDay.helpers({
   projectsToAugment: function() {
-    return Projects.find({currently_blocked: false}, {});
+    return Projects.find({currently_blocked: false, shipped: false}, {});
   }
 });

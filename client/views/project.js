@@ -13,7 +13,7 @@ Template.project.helpers({
 });
 
 Template.project.events({
-  'click button': function(e) {
+  'click .unblocked': function(e) {
     e.preventDefault();
 
     Projects.update(this._id, {$addToSet: {
@@ -30,14 +30,20 @@ Template.project.events({
         alert(error.reason);
       }
     });
+  },
 
-    // Projects.update(this.projectId, {$set: {
-    //   current_blocker: '',
-    //   currently_blocked: false
-    // }}, function(error) {
-    //   if (error) {
-    //     alert(error.reason);
-    //   }
-    // });
+  'click .shipped': function(e) {
+    e.preventDefault();
+
+    Projects.update(this._id, {$set: {
+      current_blocker: '',
+      currently_blocked: false,
+      shipped: true,
+      last_progress_day: new Date()
+    }}, function(error) {
+      if (error) {
+        alert(error.reason);
+      }
+    });
   }
 })

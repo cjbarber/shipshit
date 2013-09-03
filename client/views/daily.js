@@ -1,5 +1,5 @@
 Template.daily.helpers({
   projects: function() {
-    return Projects.find({}, {});
+    return Projects.find({shipped: false}, {});
   }
 });
